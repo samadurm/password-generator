@@ -1,15 +1,19 @@
 function handleSubmit(){
     var length = document.getElementById("length").value;
+    var maxLen = document.getElementById("length").max;
+
+    if(length > maxLen)
+        length = maxLen;
+
     var password = generatePassword(length);
 
-    document.getElementById("result").innerHTML = password;
+    document.getElementById("result").textContent = password;
 }
 
 function generatePassword(length){
     var password="";
     for(var i = 0; i < length; i++){
-        var randChar = randomASCII(97, 122);
-        password += randChar;
+        password += randomASCII(33, 125);
     }
     return password;
 }
@@ -19,4 +23,3 @@ function randomASCII(min, max){
 }
 
 document.getElementById("submit").addEventListener("click", handleSubmit);
-
