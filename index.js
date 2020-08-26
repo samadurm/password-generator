@@ -1,9 +1,11 @@
 function handleSubmit(){
     var length = document.getElementById("length").value;
     var maxLen = document.getElementById("length").max;
-
-    if(length > maxLen)
+    
+    if(length > maxLen){
         length = maxLen;
+    }
+    console.log("Length is " + length)
 
     var password = generatePassword(length);
 
@@ -23,3 +25,8 @@ function randomASCII(min, max){
 }
 
 document.getElementById("submit").addEventListener("click", handleSubmit);
+
+function copyToClipboard(){
+    var password = document.getElementById("result").innerHTML;
+    console.log("Generated password " + password)
+}
