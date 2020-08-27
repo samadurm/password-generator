@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,27 +10,27 @@
             Password Generator
         </title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div>
-            <h3>Welcome to Password Generator!</h3>
-            <p>Select how many characters you would like your password to be, and a random password will be generated.</p>
-        </div>
-        <div>
+        <div class="container h-100 justify-content-center pt-5">
+            <h3 class="row pt-5 pl-3">Welcome to Password Generator!</h3>
+            <p class="row p-1 pl-3">Select how many characters you would like your password to be, and a random password will be generated.</p>
             <span>
-                <label for="length">Password Length</label>
+                <label for="length" >Password Length </label>
                 <input type="number" id="length" min="6" max="100">
-                <input type="submit" id="submit" value="Submit">
+                <button type="submit" id="submit" class="btn btn-dark">Submit</button>
             </span>
+            <h5 class="row p-2 pl-3">Click to copy to clipboard:</h5>
+            <div class="row pt-1 pl-3">
+                <p id="result" class="p-1 plr-3 tohover" onClick="copyToClipboard()">Select password length and submit</p>
+            </div>
         </div>
-        <div id="result" onClick="copyToClipboard()">
-            <input disabled>
-        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="index.js" async defer></script>
     </body>
 </html>
