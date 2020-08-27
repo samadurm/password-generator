@@ -1,3 +1,8 @@
+/*
+    Function: handleSubmit
+    Description: performs error checking on input and calls
+        the function to generate the random password
+*/
 function handleSubmit(){
     var length = document.getElementById("length").value;
     var maxLen = document.getElementById("length").max;
@@ -12,6 +17,11 @@ function handleSubmit(){
     document.getElementById("result").textContent = password;
 }
 
+/*
+    Function: generatePassword
+    Description: Builds up a random password 1 character at a time
+        starting from ASCII value of 33 and going up to 125
+*/
 function generatePassword(length){
     var password="";
     for(var i = 0; i < length; i++){
@@ -20,6 +30,11 @@ function generatePassword(length){
     return password;
 }
 
+/*
+    Function: randomASCII
+    Description: returns a random character using ASCII
+        value between min and max
+*/
 function randomASCII(min, max){
     return String.fromCharCode(Math.floor(Math.random() * (max - min) + min));
 }
