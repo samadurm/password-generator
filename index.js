@@ -4,13 +4,17 @@
         the function to generate the random password
 */
 function handleSubmit(){
-    var length = document.getElementById("length").value;
-    var maxLen = document.getElementById("length").max;
-    
-    if(length < maxLen){
+    var length = Number(document.getElementById("length").value);
+    const maxLen = Number(document.getElementById("length").max);
+    const minLen = Number(document.getElementById("length").min);
+
+    if(length > maxLen){
+        alert("Exceeded maximum password length. Generating password of " + maxLen + " characters.");
         length = maxLen;
+    } else if(length < minLen){
+        alert("Below minimum password length. Generating password of " + minLen + " characters.");
+        length = minLen;
     }
-    console.log("Length is " + length)
 
     var password = generatePassword(length);
 
@@ -51,7 +55,7 @@ function copyToClipboard(){
     if(password != "Select password length and submit") {
         
         var textArea = document.createElement('textarea');
-        textArea.value = str;
+        textArea.value = password;
         textArea.setAttribute('readonly', '');
         textArea.style.position = 'absolute';
         textArea.style.left = '-9999px';
