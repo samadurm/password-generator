@@ -18,13 +18,14 @@
         <div class="container h-100 justify-content-center pt-5">
             <h3 class="row pt-5 pl-3">Welcome to Password Generator!</h3>
             <p class="row p-1 pl-3">Select how many characters you would like your password to be, and a random password will be generated.</p>
-            <span">
+            <span>
                 <label for="length" >Password Length </label>
                 <input type="number" id="length" min="6" max="100">
                 <button type="submit" id="submit" class="btn btn-dark">Submit</button>
             </span>
-            <div class="row pt-3 pl-3">
-                <p id="result" class="col-12 p-1 pl-3" onClick="copyToClipboard()" style="background:white">Select a length and submit</p>
+            <h5 class="row p-2 pl-3">Click to copy to clipboard:</h5>
+            <div class="row pt-1 pl-3">
+                <p id="result" class="p-1 plr-3 tohover" onClick="copyToClipboard()">Select password length and submit</p>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -2,3 +2,14 @@ html, body{
     background-image: linear-gradient(white, grey);
     height: 100%;
 }
+
+#result{
+    border-radius: 15px;
+    background: white;
+}
+
+#result:hover{
+    text-decoration: underline;
+    background: rgb(221, 221, 221);
+    cursor: copy;
+}
