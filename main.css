@@ -13,3 +13,11 @@ html, body{
     background: rgb(221, 221, 221);
     cursor: copy;
 }
+
+h3, h5{
+    font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif;
+}
+
+.label-text{
+    font-family: 'Open-Sans', sans-serif;
+}
