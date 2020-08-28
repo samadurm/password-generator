@@ -21,3 +21,7 @@ h3, h5{
 .label-text{
     font-family: 'Open-Sans', sans-serif;
 }
+
+#password-strength{
+    width: 100px;
+}
