@@ -4,14 +4,15 @@
         the function to generate the random password
 */
 function handleSubmit(){
-
-    const length = validateLength();
-    displayPasswordStrength(length);
-
-    var password = generatePassword(length);
-    estimatePasswordTries(length);
-
-    document.getElementById("result").textContent = password;
+    if(document.getElementById("length").value != ""){
+        const length = validateLength();
+        displayPasswordStrength(length);
+    
+        var password = generatePassword(length);
+        estimatePasswordTries(length);
+    
+        document.getElementById("result").textContent = password;
+    }
 }
 
 /*
